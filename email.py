@@ -5,6 +5,7 @@ import re
 def filter_sentence_by_word(word, text):
     sentence_end_regex = re.compile(r'[\.\?!]+')
     result = []
+    smth = 0
     start_sentence = 0
     for match in re.finditer(sentence_end_regex, text):
         sentence = text[start_sentence:match.end()]
